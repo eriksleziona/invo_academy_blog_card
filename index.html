@@ -11,19 +11,33 @@
 <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
 
 <body>
-  <div id="home-page">
-    <div>
-      <img src="/public/images/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
-      <h1>INVO Academy JS Starter with Vite</h1>
-      <p>
-        See the README.md for more information on how to start your challenge.
-      </p>
-      <div class="card">
-        <button id="counter" type="button"></button>
+  <div class="home-page-container">
+    <div class="card-container" >
+        <a href="#" class="card-container__wrapper">
+            <div class="card-container__image">
+              <img src="public/images/pexels-dmitry-zvolskiy-12445654 1.jpg" alt="">
+            </div>
+            <div class="card-container__post">
+                <div class=" card-container__author">
+                  <div class="card-container__author-row">
+                    <img class="card-container__author-avatar" src="public/images/pexels-anastasiya-lobanovskaya-789305 3.png" alt="">
+                    <p class="card-container__author-name">Kylee Thomson</p>
+                  </div>
+                  <div class="card-container__author-created">1h ago.</div>
+                </div>
+                <div class="card-container__text">
+                    <h1 class="card-container__text-title">Valentine's gifts</h1>
+                    <p class="card-container__text-desc">Discover the best Valentine's Day gifts for Women and Men, see how a small gift can make the other person happy for little money.</p>
+                </div>
+            </div>
+            <div class="card-container__readmore">
+              <span class="card-container__readmore-text">Read more</span>
+              <img class="card-container__readmore-arrow" src="public/images/left-arrow 1.png" alt="">
+            </div>
+          </a>
       </div>
-    </div>
-  </div>
 
+  </div>
   <script type="module" src="/src/global-scripts/main.js"></script>
   <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
 </body>

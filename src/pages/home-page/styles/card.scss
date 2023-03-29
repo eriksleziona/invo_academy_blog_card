@@ -1,0 +1,71 @@
+@import 'mixins/mixins.scss';
+
+.card-container {
+    max-width: 608px;
+    display: flex;
+    margin-top: 227px;
+    margin-bottom: 226px;
+    & &__wrapper {
+        height: 571px;
+        @include border-radius-card;
+        text-decoration: none;
+        color: var(--color-primary);
+        background-color: var(--color-bg-card);
+        align-items: center;
+    }
+    & &__image {
+        margin: 16px 16px 0 16px;
+        height: 296px;
+        @include image-size-destop;
+    }
+    & &__post {
+        margin: 0 16px
+    }
+    & &__author {
+        @include row-direction;
+        margin-top: 32px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    & &__author-name {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0px;
+    }
+    & &__author-created {
+        font-size: 14px;
+        color: var(--color-body)
+    }
+    & &__author-row {
+        @include row-direction;
+        align-items: center;
+        gap: 12px;
+    }
+    & &__author-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    & &__text-title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 32px;
+        margin-bottom: 14px;
+    }
+    & &__text-desc {
+        font-size: 16px;
+        color: var(--color-body);
+    }
+    & &__readmore{
+        margin: 32px 16px 0px 16px;
+        @include row-direction;
+        align-items: center;
+        gap: 12px;
+    }
+    & &__readmore-text {
+        font-size: 16px;
+        line-height: 130%;
+        font-weight: 500;
+    }
+}
+
