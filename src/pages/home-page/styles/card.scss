@@ -28,13 +28,10 @@
         align-items: center;
     }
     & &__author-name {
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 0px;
+      @include author-fonts;
     }
     & &__author-created {
-        font-size: 14px;
-        color: var(--color-body)
+        @include author-created-fonsts;
     }
     & &__author-row {
         @include row-direction;
@@ -47,14 +44,12 @@
         border-radius: 50%;
     }
     & &__text-title {
-        font-size: 24px;
-        font-weight: 500;
+        @include title-fonts;
         margin-top: 32px;
         margin-bottom: 14px;
     }
     & &__text-desc {
-        font-size: 16px;
-        color: var(--color-body);
+        @include text-fonts;
     }
     & &__readmore{
         margin: 32px 16px 0px 16px;
@@ -63,9 +58,37 @@
         gap: 12px;
     }
     & &__readmore-text {
-        font-size: 16px;
-        line-height: 130%;
-        font-weight: 500;
+      @include readme-fonts;
     }
+    @media (max-width: 992px) {
+        margin-top: 312px;
+        margin-bottom: 311px;
+    }
+    @media (max-width: 625px) {
+        margin: 147px 16px 146px 16px;
+        & &__image {
+            height: auto;
+            @include image-size-mobile;
+        }
+        & &__wrapper {
+            height: 519px;
+            width: 343px;
+        }
+        & &__author {
+            margin-top: 23px;
+        }
+        & &__text-title {
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+        & &__readmore {
+            margin-top: 24px;
+        }
+        & &__author-avatar{
+            width: 36px;
+            height: 36px;
+        }
+    }
+    
 }
 

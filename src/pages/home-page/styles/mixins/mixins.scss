@@ -2,10 +2,16 @@
 @mixin image-size-destop {
     img {
         border-radius: var(--border-radius);
-        width: 576;
-        height: 296px;
     }
+}
+
+@mixin image-size-mobile {
+    img {
+        width: 311px;
+        height: 273px;
+        object-fit: cover;
     }
+}
 
 @mixin border-radius-card {
     border-radius:  var(--border-radius);
@@ -14,4 +20,50 @@
 @mixin row-direction {
     display: flex;
     flex-direction: row;
+}
+
+@mixin title-fonts {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    @media (max-width: 625px) {
+        font-size: 18px;
+    }
+}
+
+@mixin readme-fonts {
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 500;
+
+    @media (max-width: 625px) {
+        font-size: 14px;
+    }
+}
+
+@mixin author-fonts {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0px;
+
+    @media (max-width: 625px) {
+        font-size: 12px;
+    }
+}
+
+@mixin author-created-fonsts {
+    font-size: 14px;
+    color: var(--color-body);
+    @media (max-width: 625px) {
+        font-size: 12px;
+    
+    }
+}
+
+@mixin text-fonts {
+    font-size: 16px;
+    color: var(--color-body);
+    @media (max-width: 625px){
+        font-size: 14px;
+    }
 }
