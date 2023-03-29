@@ -89,6 +89,12 @@
             height: 36px;
         }
     }
+    @media (max-width:350px) {
+        & &__wrapper {
+            width: 264px;
+        }
+
+    }
     
 }
 

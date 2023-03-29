@@ -11,6 +11,12 @@
         height: 273px;
         object-fit: cover;
     }
+    @media (max-width: 350px) {
+        img {
+            width: 232px;
+            height: 237px;
+        }
+    }
 }
 
 @mixin border-radius-card {
