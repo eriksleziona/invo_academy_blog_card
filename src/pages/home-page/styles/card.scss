@@ -1,4 +1,6 @@
 @import 'mixins/mixins.scss';
+@import 'utilities/animation.scss';
+
 
 .card-container {
     max-width: 608px;
@@ -6,12 +8,14 @@
     margin-top: 227px;
     margin-bottom: 226px;
     & &__wrapper {
-        height: 571px;
         @include border-radius-card;
         text-decoration: none;
         color: var(--color-primary);
         background-color: var(--color-bg-card);
         align-items: center;
+    }
+    & &__wrapper:hover {
+        @include card-animation;
     }
     & &__image {
         margin: 16px 16px 0 16px;
@@ -50,15 +54,19 @@
     }
     & &__text-desc {
         @include text-fonts;
+        @include sentence-shorten(20.8px)
     }
     & &__readmore{
-        margin: 32px 16px 0px 16px;
+        margin: 32px 16px 22px 16px;
         @include row-direction;
         align-items: center;
         gap: 12px;
     }
     & &__readmore-text {
       @include readme-fonts;
+    }
+    & &__wrapper:hover {
+        animation: zoom-in-zoom-out 1s ease;
     }
     @media (max-width: 992px) {
         margin-top: 312px;
@@ -71,7 +79,7 @@
             @include image-size-mobile;
         }
         & &__wrapper {
-            height: 519px;
+            height: fit-content;
             width: 343px;
         }
         & &__author {

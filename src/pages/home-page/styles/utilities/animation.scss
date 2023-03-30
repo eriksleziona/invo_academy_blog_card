@@ -1,0 +1,8 @@
+
+
+@keyframes zoom-in-zoom-out {
+    0% {transform: scaleX(1) scaleY(1);}
+    50% {transform: sscaleX(1.05) scaleY(1.05);}
+    70% {transform: scaleX(1.05) scaleY(1.05);}
+    100%{transform: scaleX(1) scaleY(1);}
+}
