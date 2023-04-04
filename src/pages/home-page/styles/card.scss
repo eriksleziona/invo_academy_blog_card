@@ -1,108 +1,105 @@
-@import 'mixins/mixins.scss';
-@import 'utilities/animation.scss';
-
+@import "mixins/mixins.scss";
+@import "utilities/animation.scss";
 
 .card-container {
-    max-width: 608px;
-    display: flex;
-    margin-top: 227px;
-    margin-bottom: 226px;
-    & &__wrapper {
-        @include border-radius-card;
-        text-decoration: none;
-        color: var(--color-primary);
-        background-color: var(--color-bg-card);
-        align-items: center;
-    }
-    & &__wrapper:hover {
-        @include card-animation;
-    }
+  max-width: 608px;
+  display: flex;
+  margin-top: 227px;
+  margin-bottom: 226px;
+  & &__wrapper {
+    @include border-radius-card;
+
+    text-decoration: none;
+    color: var(--color-primary);
+    background-color: var(--color-bg-card);
+    align-items: center;
+  }
+  & &__wrapper:hover {
+    @include card-animation;
+  }
+  & &__image {
+    margin: 16px 16px 0 16px;
+    height: 296px;
+    @include image-size-destop;
+  }
+  & &__post {
+    padding: 0 16px;
+  }
+  & &__author {
+    @include row-direction;
+    margin-top: 32px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & &__author-name {
+    @include author-fonts;
+  }
+  & &__author-created {
+    @include author-created-fonsts;
+  }
+  & &__author-row {
+    @include row-direction;
+    align-items: center;
+    gap: 12px;
+  }
+  & &__author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  & &__text-title {
+    @include title-fonts;
+    margin-top: 32px;
+    margin-bottom: 14px;
+  }
+  & &__text-desc {
+    @include text-fonts;
+    @include sentence-shorten(20.8px);
+  }
+  & &__readmore {
+    padding: 32px 16px 22px 16px;
+    @include row-direction;
+    align-items: center;
+    gap: 12px;
+  }
+  & &__readmore-text {
+    @include readme-fonts;
+  }
+  & &__wrapper:hover {
+    animation: zoom-in-zoom-out 1s ease;
+  }
+  @media (max-width: 992px) {
+    margin-top: 312px;
+    margin-bottom: 311px;
+  }
+  @media (max-width: 625px) {
+    margin: 147px 16px 146px 16px;
     & &__image {
-        margin: 16px 16px 0 16px;
-        height: 296px;
-        @include image-size-destop;
+      height: auto;
+      @include image-size-mobile;
     }
-    & &__post {
-        margin: 0 16px
+    & &__wrapper {
+      height: fit-content;
+      width: 343px;
     }
     & &__author {
-        @include row-direction;
-        margin-top: 32px;
-        justify-content: space-between;
-        align-items: center;
-    }
-    & &__author-name {
-      @include author-fonts;
-    }
-    & &__author-created {
-        @include author-created-fonsts;
-    }
-    & &__author-row {
-        @include row-direction;
-        align-items: center;
-        gap: 12px;
-    }
-    & &__author-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
+      margin-top: 20px;
     }
     & &__text-title {
-        @include title-fonts;
-        margin-top: 32px;
-        margin-bottom: 14px;
+      margin-top: 24px;
+      margin-bottom: 8px;
     }
-    & &__text-desc {
-        @include text-fonts;
-        @include sentence-shorten(20.8px)
+    & &__readmore {
+      padding-top: 24px;
     }
-    & &__readmore{
-        margin: 32px 16px 22px 16px;
-        @include row-direction;
-        align-items: center;
-        gap: 12px;
+    & &__author-avatar {
+      width: 36px;
+      height: 36px;
     }
-    & &__readmore-text {
-      @include readme-fonts;
+  }
+  @media (max-width: 350px) {
+    & &__wrapper {
+      width: 264px;
     }
-    & &__wrapper:hover {
-        animation: zoom-in-zoom-out 1s ease;
-    }
-    @media (max-width: 992px) {
-        margin-top: 312px;
-        margin-bottom: 311px;
-    }
-    @media (max-width: 625px) {
-        margin: 147px 16px 146px 16px;
-        & &__image {
-            height: auto;
-            @include image-size-mobile;
-        }
-        & &__wrapper {
-            height: fit-content;
-            width: 343px;
-        }
-        & &__author {
-            margin-top: 23px;
-        }
-        & &__text-title {
-            margin-top: 24px;
-            margin-bottom: 8px;
-        }
-        & &__readmore {
-            margin-top: 24px;
-        }
-        & &__author-avatar{
-            width: 36px;
-            height: 36px;
-        }
-    }
-    @media (max-width:350px) {
-        & &__wrapper {
-            width: 264px;
-        }
-
-    }
-    
+  }
 }
-

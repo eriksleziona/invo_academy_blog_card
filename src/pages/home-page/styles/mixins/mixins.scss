@@ -1,97 +1,97 @@
-@import '../utilities/animation.scss';
+@import "../utilities/animation.scss";
 
 @mixin sentence-shorten($line-h-value) {
-    overflow: hidden;
-    max-height: calc($line-h-value * 3);
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    display: block;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
+  overflow: hidden;
+  max-height: calc($line-h-value * 3);
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
 }
-
 
 @mixin image-size-destop {
-    img {
-        border-radius: var(--border-radius);
-    }
+  img {
+    border-radius: var(--border-radius);
+  }
 }
 @mixin image-size-mobile {
+  img {
+    width: 311px;
+    height: 273px;
+    object-fit: cover;
+  }
+  @media (max-width: 350px) {
     img {
-        width: 311px;
-        height: 273px;
-        object-fit: cover;
+      width: 232px;
+      height: 237px;
     }
-    @media (max-width: 350px) {
-        img {
-            width: 232px;
-            height: 237px;
-        }
-    }
+  }
 }
 
 @mixin border-radius-card {
-    border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
 }
 
 @mixin row-direction {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 @mixin title-fonts {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 100%;
-    @media (max-width: 625px) {
-        font-size: 18px;
-    }
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  @media (max-width: 625px) {
+    font-size: 18px;
+  }
 }
 
 @mixin readme-fonts {
-    font-size: 16px;
-    line-height: 130%;
-    font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 500;
 
-    @media (max-width: 625px) {
-        font-size: 14px;
-    }
+  @media (max-width: 625px) {
+    font-size: 14px;
+  }
 }
 
 @mixin author-fonts {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0px;
 
-    @media (max-width: 625px) {
-        font-size: 12px;
-    }
+  @media (max-width: 625px) {
+    font-size: 12px;
+  }
 }
 
 @mixin author-created-fonsts {
-    font-size: 14px;
-    color: var(--color-body);
-    @media (max-width: 625px) {
-        font-size: 12px;
-    
-    }
+  font-size: 14px;
+  color: var(--color-body);
+  @media (max-width: 625px) {
+    font-size: 12px;
+  }
 }
 
 @mixin text-fonts {
-    font-size: 16px;
-    color: var(--color-body);
-    line-height: 130%;
-    @media (max-width: 625px){
-        font-size: 14px;
-    }
+  font-size: 16px;
+  color: var(--color-body);
+  line-height: 130%;
+  @media (max-width: 625px) {
+    font-size: 14px;
+  }
 }
 
 @mixin card-animation {
-    animation: zoom-in-zoom-out .8s ease-in-out;
+  .card-container__image-item {
+    animation: zoom-in-zoom-out 0.8s ease;
+  }
 
-    span {
-        transition: all .8s;
-        border-bottom: 2px solid var(--color-primary);
-    }
+  span {
+    transition: all 0.8s ease-in 0.5s;
+    border-bottom: 2px solid var(--color-primary);
+  }
 }
