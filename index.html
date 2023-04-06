@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVO Academy JS Starter with Vite</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INVO Academy JS Starter with Vite</title>
-</head>
+  <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
 
-<!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
-
-<body>
-  <div class="home-page-container">
-    <div class="card-container" >
+  <body>
+    <div class="home-page-container">
+      <div class="card-container">
         <a href="#" class="card-container__wrapper">
-            <div class="card-container__image">
-              <img class="card-container__image-item" src="public/images/pexels-dmitry-zvolskiy-12445654 1.jpg" alt="">
+          <div class="card-container__image">
+            <img
+              class="card-container__image-item"
+              src="public/images/pexels-dmitry-zvolskiy-12445654 1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-container__post">
+            <div class="card-container__author">
+              <div class="card-container__author-row">
+                <img
+                  class="card-container__author-avatar"
+                  src="public/images/pexels-anastasiya-lobanovskaya-789305 3.png"
+                  alt=""
+                />
+                <p class="card-container__author-name">Kylee Thomson</p>
+              </div>
+              <div class="card-container__author-created">1h ago.</div>
             </div>
-            <div class="card-container__post">
-                <div class=" card-container__author">
-                  <div class="card-container__author-row">
-                    <img class="card-container__author-avatar" src="public/images/pexels-anastasiya-lobanovskaya-789305 3.png" alt="">
-                    <p class="card-container__author-name">Kylee Thomson</p>
-                  </div>
-                  <div class="card-container__author-created">1h ago.</div>
-                </div>
-                <div class="card-container__text">
-                    <h1 class="card-container__text-title">Valentine's gifts</h1>
-                    <p class="card-container__text-desc">Discover the best Valentine's Day gifts for Women and Men, see how a small gift can make the other person happy for little money.</p>
-                </div>
+            <div class="card-container__text">
+              <h1 class="card-container__text-title">Valentine's gifts</h1>
+              <p class="card-container__text-desc">
+                Discover the best Valentine's Day gifts for Women and Men, see
+                how a small gift can make the other person happy for little
+                money.
+              </p>
             </div>
-            <div class="card-container__readmore">
-              <span class="card-container__readmore-text">Read more</span>
-              <img class="card-container__readmore-arrow" src="public/images/left-arrow 1.png" alt="">
-            </div>
-          </a>
+          </div>
+          <div class="card-container__readmore">
+            <span class="card-container__readmore-text">Read more</span>
+            <img
+              class="card-container__readmore-arrow"
+              src="public/images/left-arrow 1.png"
+              alt=""
+            />
+          </div>
+        </a>
       </div>
-
-  </div>
-  <script type="module" src="/src/global-scripts/main.js"></script>
-  <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
-</body>
-
+    </div>
+    <script type="module" src="/src/global-scripts/main.js"></script>
+    <script
+      type="module"
+      src="/src/pages/home-page/scripts/home-page.js"
+    ></script>
+  </body>
 </html>

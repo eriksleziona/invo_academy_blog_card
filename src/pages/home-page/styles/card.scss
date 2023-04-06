@@ -1,8 +1,8 @@
 @import "mixins/mixins.scss";
-@import "utilities/animation.scss";
 
 .card-container {
   max-width: 608px;
+  max-height: 571px;
   display: flex;
   margin-top: 227px;
   margin-bottom: 226px;
@@ -45,6 +45,7 @@
   & &__author-avatar {
     width: 40px;
     height: 40px;
+    object-fit: cover;
     border-radius: 50%;
   }
   & &__text-title {
