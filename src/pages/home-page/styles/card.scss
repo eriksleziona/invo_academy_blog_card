@@ -17,10 +17,18 @@
   & &__wrapper:hover {
     @include card-animation;
   }
+
   & &__image {
     margin: 16px 16px 0 16px;
     height: 296px;
     @include image-size-destop;
+  }
+
+  & &__image-wrapper {
+    border-radius: var(--border-radius);
+    width: 576px;
+    height: 296px;
+    overflow: hidden;
   }
   & &__post {
     padding: 0 16px;
@@ -48,6 +56,9 @@
     object-fit: cover;
     border-radius: 50%;
   }
+  & &__text {
+    height: 112px;
+  }
   & &__text-title {
     @include title-fonts;
     margin-top: 32px;
@@ -58,7 +69,7 @@
     @include sentence-shorten(20.8px);
   }
   & &__readmore {
-    padding: 32px 16px 22px 16px;
+    padding: 0 16px 22px 16px;
     @include row-direction;
     align-items: center;
     gap: 12px;
@@ -66,9 +77,9 @@
   & &__readmore-text {
     @include readme-fonts;
   }
-  & &__wrapper:hover {
+  /*   & &__wrapper:hover {
     animation: zoom-in-zoom-out 1s ease;
-  }
+  } */
   @media (max-width: 992px) {
     margin-top: 312px;
     margin-bottom: 311px;
@@ -79,19 +90,24 @@
       height: auto;
       @include image-size-mobile;
     }
+
+    & &__image-wrapper {
+      width: 311px;
+      height: 273px;
+    }
     & &__wrapper {
       height: fit-content;
       width: 343px;
     }
     & &__author {
-      margin-top: 20px;
+      margin-top: 23px;
     }
     & &__text-title {
       margin-top: 24px;
       margin-bottom: 8px;
     }
-    & &__readmore {
-      padding-top: 24px;
+    & &__text {
+      height: 104px;
     }
     & &__author-avatar {
       width: 36px;
@@ -101,6 +117,11 @@
   @media (max-width: 350px) {
     & &__wrapper {
       width: 264px;
+    }
+
+    & &__image-wrapper {
+      width: 232px;
+      height: 237px;
     }
   }
 }
